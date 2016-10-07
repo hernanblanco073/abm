@@ -1,0 +1,28 @@
+
+		
+
+	<div class="container">
+		
+		<div class="CajaInicio animated bounceInRight">
+			<h1> Login </h1>
+
+			<form name="FormIngreso" id="FormIngreso"  enctype="multipart/form-data" novalidate >
+
+				<label  >Correo :</label>
+				<input type="text" name="apellido" ng-model="usuario.correo" placeholder="ingrese coreo" value=""  required/>
+				<span id="lblApellido" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+				</span>
+
+				<label  >Clave :</label>
+				<input type="text"  ng-model="usuario.clave" placeholder="ingrese clave" value="" /> <span id="lblNombre" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+
+
+				<a class="btn btn-info " ng-click="IniciarSesion()" ><span class="glyphicon glyphicon-save">&nbsp;</span>Guardar</a>
+					
+				<input type="hidden" value="" id="idParaModificar" name="agregar" />
+				<input type="hidden" value="" id="hdnAgregar" name="agregar" />
+				
+
+			</form>
+	</div>
+	</div>

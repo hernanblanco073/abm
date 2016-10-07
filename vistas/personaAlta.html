@@ -1,0 +1,36 @@
+<div class="container">
+		           
+					<div class="CajaInicio animated bounceInRight">
+							<div class="CajaInicio animated bounceInRight">
+			<h1> <!--?php echo $titulo; ?-->titulo </h1>
+
+			<form id="FormIngreso" name="FormIngreso" enctype="multipart/form-data" >
+				<!--<input type="checkbox" name="check" id="check" ng-model="ver"><span>{{ver}}</span>-->
+				<!-- ng-if: crea y destruye objetos
+					ng-show: muestra o oculta objetos
+					ng-disabled: habilita o deshabilita objetos-->
+				<label for="apellido">Apellido: </label><br>
+				<input type="text" name="apellido" ng-model="persona.apellido" placeholder="ingrese apellido" value="" required/>
+				<span id="lblApellido" style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.apellido.$error.required'>* El apellido es requerido
+				</span>
+
+				<br><label for="nombre">Nombre: </label><br>
+				<input type="text" name="nombre" ng-model="persona.nombre" placeholder="ingrese nombre" value="" required/> <span id="lblNombre" style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.nombre.$error.required'>* El nombre es requerido</span>
+
+				<br><label for="dni">Dni: </label><br>
+				<input type="number" name="dni" ng-model="persona.dni" placeholder="ingrese DNI" value="" style="width:100%" required/>
+				<span id="lblDni" style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.dni.$error.required'>* El DNI es requerido</span>
+
+				
+
+				<!--<br><a class="btn btn-info " ng-disabled="FormIngreso.$invalid || FormIngreso.$error || FormIngreso.clave1.$untouched || persona.password!=persona.copiapassword || persona.estado=''" name="guardar" ng-click="Guardar()" ><span class="glyphicon glyphicon-save">&nbsp;</span>Guardar</a>-->
+				<br><a class="btn btn-info " ng-disabled="FormIngreso.$invalid" name="guardar" ng-click="Guardar()" ><span class="glyphicon glyphicon-save">&nbsp;</span>Guardar</a>
+					
+				<input type="hidden" value="" id="idParaModificar" name="agregar" />
+				<input type="hidden" value="" id="hdnAgregar" name="agregar" />
+
+				</form>
+		</div>
+
+						</div>
+		</div>
